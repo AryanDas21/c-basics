@@ -3,7 +3,7 @@
 //Following values are the range limits for each datatype in a 16-bit machine
 int main() { 
     int a = -32768;     //signed int by default
-    printf("Signed integer : %d\n", a);
+    printf("Signed Integer : %d\n", a);
 
     unsigned int b = 65535;    //unsigned is necessary
     printf("Unsigned Integer : %u\n", b);
