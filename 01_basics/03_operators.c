@@ -45,9 +45,9 @@ int main () {
     printf("Equal-to: %d\n", f == g);
     printf("Not Equal-to: %d\n", f != g);
     printf("Greater-than: %d\n", f > g);
-    printf("Lesser-than: %d\n", f < g);
+    printf("Less-than: %d\n", f < g);
     printf("Greater-than Equal-to: %d\n", f >= g);
-    printf("Lesser-than Equal-to: %d\n", f <= g);
+    printf("Less-than Equal-to: %d\n", f <= g);
 
     //Logical Operators
 
@@ -64,7 +64,7 @@ int main () {
 
     //Assignment Operators
 
-    int h, i = 10, j = 10, k = 10, l = 10, m = 10, n = 10, o = 10, p = 10;
+    int h, i = 10, j = 10, k = 10, l = 10, m = 10, n = 10, o = 10, p = 10, q =10, r = 10;
 
     h = g;
     printf("Simple Assign: %d\n", h);
@@ -78,12 +78,26 @@ int main () {
     printf("Divide and Assign: %d\n", l);
     m %= g;
     printf("Modulo and Assign: %d\n", m);
-    n ^= g;
-    printf("Bitwise XOR and Assign: %d\n", n);
-    o <<= g;
-    printf("Left Shift and Assign: %d\n", o);
-    p >>= g;
-    printf("Right Shift and Assign: %d\n", p);
+    n &= g;
+    printf("Bitwise AND and Assign: %d\n", n);
+    o |= g;
+    printf("Bitwise OR and Assign: %d\n", o);
+    p ^= g;
+    printf("Bitwise XOR and Assign: %d\n", p);
+    q <<= g;
+    printf("Left Shift and Assign: %d\n", q);
+    r >>= g;
+    printf("Right Shift and Assign: %d\n", r);
+
+    //Comma Operator
+
+    int s = (10, 20, 30);
+    printf("Comma: %d\n", s);
+
+    //Ternary Operator
+
+    int t = (f > g) ? f : g;
+    printf("Ternary (Conditional): %d\n", t);
 
     return 0;
 }
