@@ -23,9 +23,9 @@ int main () {
     printf("Unary Plus: %d\n", +e);
     printf("Unary Minus: %d\n", -e);    //Temporarily changes the value to negative
     printf("Logical NOT: %d\n", !e);    //Every constant value is taken as True (1)
-    printf("Bitwise NOT / Tilde: %d\n", ~e);    //~x = -(x+1)  (except for unsigned datatypes)
+    printf("Bitwise NOT / Tilde: %d\n", ~e);    //~x = -(x+1)  (only for signed datatypes)
     printf("Address-of: %p\n", &e);    //This address changes every execution due to ASLR (OS memory randomization for security) and dynamic stack allocation
-    printf("Sizeof: %zu bytes\n", sizeof(e));
+    printf("Sizeof: %zu bytes\n", sizeof(e));    //Returns a data type called size_t, which changes size depending on the computer architecture; %zu ensures correct pairing
     printf("(type): %f\n", (float)e);
 
     //Binary Operators
