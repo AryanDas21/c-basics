@@ -21,11 +21,11 @@ int main () {
     int e = 10;
 
     printf("Unary Plus: %d\n", +e);
-    printf("Unary Minus: %d\n", -e);
+    printf("Unary Minus: %d\n", -e);    //Temporarily changes the value to negative
     printf("Logical NOT: %d\n", !e);    //Every constant value is taken as True (1)
     printf("Bitwise NOT / Tilde: %d\n", ~e);    //~x = -(x+1)  (except for unsigned datatypes)
     printf("Address-of: %d\n", &e);    //This address changes every execution due to ASLR (OS memory randomization for security) and dynamic stack allocation
-    printf("Sizeof: %d bytes\n", sizeof(e));    //Returns size of variable in bytes
+    printf("Sizeof: %d bytes\n", sizeof(e));
     printf("(type): %f\n", (float)e);
 
     //Binary Operators
@@ -34,13 +34,13 @@ int main () {
 
     //Arithmetic Operators
 
-    printf("Add: %d\n", f + g);
-    printf("Subtract: %d\n", f - g);
-    printf("Multiply: %d\n", f * g);
-    printf("Divide: %d\n", f / g);
+    printf("Addition: %d\n", f + g);
+    printf("Subtraction: %d\n", f - g);
+    printf("Multiplication: %d\n", f * g);
+    printf("Division: %d\n", f / g);
     printf("Modulo: %d\n", f % g);
 
-    //Relational Operators
+    //Relational Operators (always returns 0 (false) or 1 (true))
 
     printf("Equal-to: %d\n", f == g);
     printf("Not Equal-to: %d\n", f != g);
@@ -51,16 +51,16 @@ int main () {
 
     //Logical Operators
 
-    printf("Logical AND: %d\n", f && g);
-    printf("Logical OR: %d\n", f || g);
+    printf("Logical AND: %d\n", f && g);    //Does not execute the second operand if the first operand is 0
+    printf("Logical OR: %d\n", f || g);    //Does not execute the second operand if the first operand is 1
 
     //Bitwise Operators
 
-    printf("Bitwise AND: %d\n", f & g);
+    printf("Bitwise AND: %d\n", f & g);    //Converts the values to binary first, then compares individual bits (0s and 1s)
     printf("Bitwise OR: %d\n", f | g);
     printf("Bitwise XOR: %d\n", f ^ g);
-    printf("Left Shift: %d\n", f << g);
-    printf("Right Shift: %d\n", f >> g);
+    printf("Left Shift: %d\n", f << g);    //First operand gets multiplied by 2^(second operand)
+    printf("Right Shift: %d\n", f >> g);    //First operand gets divided by 2^(second operand)
 
     //Assignment Operators
 
@@ -74,7 +74,7 @@ int main () {
     printf("Subtract and Assign: %d\n", j);
     k *= g;
     printf("Multiply and Assign: %d\n", k);
-    l /= 5;
+    l /= g;
     printf("Divide and Assign: %d\n", l);
     m %= g;
     printf("Modulo and Assign: %d\n", m);
@@ -91,12 +91,12 @@ int main () {
 
     //Comma Operator
 
-    int s = (10, 20, 30);
+    int s = (10, 20, 30);    //It executes the left side first, discards the result of that left expression and then moves to the right side
     printf("Comma: %d\n", s);
 
     //Ternary Operator
 
-    int t = (f > g) ? f : g;
+    int t = (f > g) ? f : g;    //Evaluates condition: returns f (expression 1) if true, or g (expression 2) if false
     printf("Ternary (Conditional): %d\n", t);
 
     return 0;
