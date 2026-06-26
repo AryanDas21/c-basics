@@ -24,8 +24,8 @@ int main () {
     printf("Unary Minus: %d\n", -e);    //Temporarily changes the value to negative
     printf("Logical NOT: %d\n", !e);    //Every constant value is taken as True (1)
     printf("Bitwise NOT / Tilde: %d\n", ~e);    //~x = -(x+1)  (except for unsigned datatypes)
-    printf("Address-of: %d\n", &e);    //This address changes every execution due to ASLR (OS memory randomization for security) and dynamic stack allocation
-    printf("Sizeof: %d bytes\n", sizeof(e));
+    printf("Address-of: %p\n", &e);    //This address changes every execution due to ASLR (OS memory randomization for security) and dynamic stack allocation
+    printf("Sizeof: %zu bytes\n", sizeof(e));
     printf("(type): %f\n", (float)e);
 
     //Binary Operators
