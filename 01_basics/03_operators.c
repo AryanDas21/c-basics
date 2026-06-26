@@ -46,10 +46,10 @@ int main () {
     printf("Not Equal-to: %d\n", f != g);
     printf("Greater-than: %d\n", f > g);
     printf("Less-than: %d\n", f < g);
-    printf("Greater-than Equal-to: %d\n", f >= g);
-    printf("Less-than Equal-to: %d\n", f <= g);
+    printf("Greater-than or Equal-to: %d\n", f >= g);
+    printf("Less-than or Equal-to: %d\n", f <= g);
 
-    //Logical Operators
+    //Logical Operators (always returns 0 (false) or 1 (true))
 
     printf("Logical AND: %d\n", f && g);    //Does not execute the second operand if the first operand is 0
     printf("Logical OR: %d\n", f || g);    //Does not execute the second operand if the first operand is 1
